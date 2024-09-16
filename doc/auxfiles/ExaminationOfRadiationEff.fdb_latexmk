@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1726491373.13627 "c:/wrks/ODEof2ThermoRadiation/doc/ExaminationOfRadiationEff.tex" "auxfiles/ExaminationOfRadiationEff.pdf" "ExaminationOfRadiationEff" 1726491375.1653 0
+["lualatex"] 1726493178.31558 "c:/wrks/ODEof2ThermoRadiation/doc/ExaminationOfRadiationEff.tex" "auxfiles/ExaminationOfRadiationEff.pdf" "ExaminationOfRadiationEff" 1726493179.99394 0
   "C:/texlive/2024/texmf-var/luatex-cache/generic/fonts/otl/haranoajimincho-regular.luc" 1725596934 2011205 719a96d2334251b630f1334d697bbd4b ""
   "C:/texlive/2024/texmf-var/luatex-cache/generic/fonts/otl/lmmono9-regular.luc" 1725596934 81867 ff41678367e38761e57b974603b73d00 ""
   "C:/texlive/2024/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1725596930 127319 ab686c6a96b172576875adea7aaf8330 ""
@@ -13,7 +13,7 @@
   "C:/texlive/2024/texmf-var/luatexja/ltj-jisx0208.luc" 1725596934 93919 3545f967e0ab307c2cc8c3e8cb314d7c ""
   "C:/texlive/2024/texmf-var/luatexja/ltj-kinsoku_default.luc" 1725596927 17654 bbcb9edafee384e2db436fe71e2bf5a1 ""
   "ExaminationOfRadiationEff.tex" 1726491372 2602 b7b0c81a28ad03f7ac433f39465871d5 ""
-  "auxfiles/ExaminationOfRadiationEff.aux" 1726491374 32 3985256e7290058c681f74d7a3565a19 "lualatex"
+  "auxfiles/ExaminationOfRadiationEff.aux" 1726493179 32 3985256e7290058c681f74d7a3565a19 "lualatex"
   "c:/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf" 1725591934 6420628 de3818622611c4aa9412be05bfa54ad6 ""
   "c:/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf" 1725592046 111536 fc712364c8d0a1b548d46c76f2678030 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1725591639 1004 54797486969f23fa377b128694d548df ""
