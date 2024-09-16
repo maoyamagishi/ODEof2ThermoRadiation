@@ -11,9 +11,11 @@ for ii in range(400):
     fairing.save()
     #pilot.heatup(heatgen,dt)
     #print("pilot heat up!")
-    pilotrad = pilot.radiate(fairing.kelv,dt,1)
+    pilotrad = pilot.radiate(dt,1)
+    fairing.heatup(pilotrad,dt)
     print("pilot radiate!")
-    fairingrad = fairing.radiate(pilot.prekel,dt,0.1)
+    fairingrad = fairing.radiate(dt,0.1)
+    pilot.heatup(fairingrad,dt)
     print("fairing radiate!")
     # if fairing.kelv > 306.0:
     #     fairing.kelv = 306.0

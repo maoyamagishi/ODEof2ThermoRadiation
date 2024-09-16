@@ -43,9 +43,9 @@ class obj():
         self.__kelv += Q*dt/(self.__mass*self.__specheat)
         print(Q*dt/(self.__mass*self.__specheat))
 
-    def radiate(self,compereKelv,dt,rate)->float:
+    def radiate(self,dt,rate)->float:
         selfKelv = self.__kelv
-        amtheat = self.__eps*self.sigma*rate*(-selfKelv**4 + compereKelv**4)
+        amtheat = -1*self.__eps*self.sigma*rate*selfKelv**4
         print(amtheat)
         self.heatup(amtheat,dt)
         return amtheat
