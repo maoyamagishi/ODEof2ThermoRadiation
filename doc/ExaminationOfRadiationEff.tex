@@ -1,0 +1,37 @@
+\documentclass{ltjsarticle}
+\usepackage{luatexja} % ltjclasses, ltjsclasses を使うときはこの行不要
+\usepackage{amsmath,amssymb,amsfonts,mathtools}
+\usepackage{subfiles}
+\usepackage{graphicx}
+%%%%%%%%%%%%%%  本文  %%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{align*}
+  \frac{dT}{dt} = \frac{\epsilon \sigma}{m c}  ( T^{4} - C ) \\
+  \int \frac{1}{( T^{4} -C )} dT = \int \frac{\epsilon \sigma}{m c} a dt \\
+  \int \frac{dT}{( T -C^{\frac{1}{4}} )( T +C^{\frac{1}{4}} )( T^{2} +C^{\frac{1}{2}})} 
+  = \int \frac{\epsilon \sigma}{m c} a dt \\
+  \int \lparen \frac{\alpha_{1}}{C^{\frac{1}{4}} -T} 
+              + \frac{\alpha_{2}}{C^{\frac{1}{4}} + T}
+              + \frac{\alpha_{3}}{C^{\frac{1}{2}} + T^{2}} \rparen dT
+  = \int \frac{\epsilon \sigma}{m c}  dt 
+\end{align*}
+ただし、
+$\alpha_{1} =  \alpha_{2} = \cfrac{-1}{4C^{\frac{3}{4}}}$,
+$\alpha_{3} = \cfrac{-1}{2C^{\frac{1}{2}}}$とする。また、単位に絶対温度を用いているため
+暗にCが0より大きいことを用いた。積分を実行すると
+\begin{equation*}
+   \alpha_{1} \ln \frac{ C^{\frac{1}{4}} + T }
+          { C^{\frac{1}{4}} - T }  + 
+  \alpha_{3} C^{\frac{-1}{4}} \arctan(\frac{T}{C^{\frac{1}{4}}}) = \frac{\epsilon \sigma}{m c} t
+\end{equation*}
+ゆえに微分方程式の解はt(T)の逆関数となる。これをT(t)の形で書き下すのは困難であろうからこのままにして、
+数値計算の妥当性を確認するために使ってみる。試しに$\sigma=1.0$とし、その他の係数も1にしてしまって、
+数値計算する。微分方程式を解いて得られた関数と数値計算で得た関数を合成すれば恒等写像(入力と出力が同じ関数)に
+なることは逆関数の定義より明らかである。よって、この解析解は計算フローの妥当性を確認するために使える。\par
+プログラムで数値計算した結果を吐き出させて、スプシに貼った（ぺたー）それを理論解の逆関数に入れたのがとなりのセルで、
+更にその隣が恒等写像になっていてそれとの誤差をみた。時間の刻み幅が0.001の時は誤差が単調増加し、最大でも0.04 \% 以内に収まった。
+刻み幅が0.01の時には誤差が振動した。誤差の絶対値を取り、その最大値は2.55 \%になった。
+それぞれの結果はtimestep1c.csv とtimestep1m.csvに入れておく。\par
+見た感じいい近似になっていそうなので以降この計算フローを基本として論を進める。
+
+\end{document}
