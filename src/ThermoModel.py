@@ -1,6 +1,6 @@
 class obj():
     sigma = 5.67 * 10**(-8) #Stefan-Boltzmann constant
-    # sigma = 1.0#for test
+    #sigma = 1.0#for test
 
     def __init__(self,specheat:float,mass:float,eps:float,kelv:float) -> None:
         self.__specheat = specheat
@@ -41,12 +41,12 @@ class obj():
     def heatup(self,Q:float,dt:float)->None:
         self.__prekel = self.__kelv
         self.__kelv += Q*dt/(self.__mass*self.__specheat)
-        print(Q*dt/(self.__mass*self.__specheat))
+        #print(Q*dt/(self.__mass*self.__specheat))
 
     def radiate(self,dt,rate)->float:
         selfKelv = self.__kelv
         amtheat = -1*self.__eps*self.sigma*rate*selfKelv**4
-        print(amtheat)
+        #print(amtheat)
         self.heatup(amtheat,dt)
         return amtheat
     
